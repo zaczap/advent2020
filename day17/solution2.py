@@ -2,7 +2,6 @@
 import sys
 from itertools import chain, product
 from collections import defaultdict
-import numpy as np
 
 def get_neighbors(x, y, z, w):
     offsets = [(x+dx, y+dy, z+dz, w+dw) for dx,dy,dz,dw in product([-1, 0, 1], [-1, 0, 1], [-1, 0, 1], [-1, 0, 1])  if not all([dx == 0, dy == 0, dz == 0, dw == 0])]
